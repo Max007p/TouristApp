@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.itmo.controllers.VoyageTable">
+   <children>
+      <TableView fx:id="voyageTable" layoutX="17.0" layoutY="64.0" prefHeight="321.0" prefWidth="960.0">
+        <columns>
+          <TableColumn fx:id="columnIdVoyage" prefWidth="106.0" text="ID поездки" />
+          <TableColumn fx:id="columnStartVoyage" prefWidth="106.0" text="Дата начала" />
+            <TableColumn fx:id="columnFinishVoyage" prefWidth="106.0" text="Дата финиша" />
+            <TableColumn fx:id="columnPassengersVoyage" prefWidth="106.0" text="Пассажиры" />
+            <TableColumn fx:id="columnTicketVoyage" prefWidth="106.0" text="Стоимость билета" />
+            <TableColumn fx:id="columnRouteVoyage" prefWidth="106.0" text="Маршрут" />
+            <TableColumn fx:id="columnBusVoyage" prefWidth="106.0" text="Автобус" />
+            <TableColumn fx:id="columnDoneVoyage" prefWidth="106.0" text="Завершенность" />
+            <TableColumn fx:id="columnFactVoyage" prefWidth="111.0" text="Финиш (факт)" />
+        </columns>
+      </TableView>
+      <Label layoutX="314.0" layoutY="24.0" text="Таблица всех запланированных рейсов">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Label>
+      <VBox layoutX="17.0" layoutY="395.0" prefHeight="200.0" prefWidth="518.0" spacing="10.0">
+         <children>
+            <Label text="Выеделенная строчка + DELETE - Удаление записи">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Двойной клик по клетке - Редактирование записи">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addRow" prefHeight="25.0" prefWidth="400.0" text="Добавить новую запись">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backToMain" prefHeight="25.0" prefWidth="400.0" text="Назад">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

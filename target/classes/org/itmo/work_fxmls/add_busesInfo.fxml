@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.itmo.controllers.AddBusesInfo">
+    <children>
+        <Separator layoutX="20.0" layoutY="50.0" prefHeight="20.0" prefWidth="600.0" />
+        <Label layoutX="182.0" layoutY="26.0" text="Регистрация нового автобуса">
+            <font>
+                <Font name="Arial Black" size="16.0" />
+            </font>
+        </Label>
+        <HBox layoutX="46.0" layoutY="63.0" prefHeight="295.0" prefWidth="548.0">
+            <children>
+                <VBox alignment="CENTER_RIGHT" prefHeight="350.0" prefWidth="213.0" spacing="35.0">
+                    <children>
+                        <Label text="Название автобуса:">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Наличие туалета:">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Производитель:">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Колличество этажей:">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Колличество сидений:">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Дата производства:">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                  <Label text="Код модели:">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets right="50.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="175.0" spacing="30.0">
+                    <children>
+                        <TextField fx:id="name" />
+                  <CheckBox fx:id="toilet" mnemonicParsing="false" />
+                        <TextField fx:id="manufacturer" />
+                  <TextField fx:id="floors" />
+                  <TextField fx:id="seats" />
+                        <DatePicker fx:id="constructDate" />
+                  <TextField fx:id="codeModel" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="270.0" layoutY="420.0" spacing="20.0" />
+          <Button fx:id="addButton" layoutX="259.0" layoutY="426.0" mnemonicParsing="false" onAction="#addData" prefHeight="40.0" prefWidth="100.0" text="Добавить">
+              <font>
+                  <Font name="Times New Roman" size="18.0" />
+              </font>
+      </Button>
+    </children>
+</AnchorPane>

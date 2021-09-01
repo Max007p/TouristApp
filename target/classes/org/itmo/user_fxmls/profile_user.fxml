@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane fx:id="backgroundPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.itmo.controllers.User_profile">
+  <tabs>
+    <Tab text="Профиль">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Separator layoutX="20.0" layoutY="50.0" prefHeight="0.0" prefWidth="560.0" />
+                  <HBox layoutX="300.0" layoutY="10.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Тип аккаунта:" />
+                        <Label fx:id="accountType" text="AccountType">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children></HBox>
+                  <HBox layoutX="20.0" layoutY="10.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Имя пользователя:" />
+                        <Label fx:id="userName" text="Name">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="allWays" layoutX="20.0" layoutY="86.0" prefHeight="560.0" prefWidth="636.0">
+                    <columns>
+                      <TableColumn fx:id="idUser" prefWidth="100.0" text="ID пасажира" />
+                      <TableColumn fx:id="nick" prefWidth="147.0" text="Никнейм" />
+                        <TableColumn fx:id="idWay" prefWidth="154.0" text="ID поездки" />
+                        <TableColumn fx:id="isPayed" prefWidth="234.0" text="Статус оплаты" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Просмотр и бронь туров">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane fx:id="scrollVoyages" layoutX="177.0" layoutY="86.0" prefHeight="488.0" prefWidth="646.0">
+                     <content>
+                        <FlowPane fx:id="listOfVoyages" prefHeight="200.0" prefWidth="200.0" />
+                     </content></ScrollPane>
+                  <Label layoutX="418.0" layoutY="39.0" text="Список поездок">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="background" alignment="CENTER" hgap="10.0" stylesheets="@../style.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.itmo.controllers.Entry">
+   <padding><Insets bottom="40" left="40" right="40" top="40" /></padding>
+   <columnConstraints>
+      <ColumnConstraints halignment="RIGHT" maxWidth="Infinity" minWidth="100" prefWidth="100" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="200" prefWidth="200" />
+   </columnConstraints>
+
+   <Label text="Вход в аккаунт" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.rowSpan="1">
+      <font>
+         <Font size="24.0" />
+      </font>
+      <GridPane.margin>
+         <Insets bottom="20" left="0" right="0" top="20" />
+       </GridPane.margin>
+   </Label>
+   <Label text="Никнейм:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+   <TextField fx:id="nicknameField" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   <Label text="Пароль:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+   <PasswordField fx:id="passwordField" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+   <Button fx:id="loginButton" defaultButton="true" onAction="#login" prefHeight="40" prefWidth="100" text="Логин" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.rowSpan="1">
+      <GridPane.margin>
+         <Insets bottom="20.0" left="150.0" top="20.0" />
+      </GridPane.margin>
+   </Button>
+   <Button fx:id="registerButton" defaultButton="true" layoutX="156.0" layoutY="299.0" onAction="#register" prefHeight="40" prefWidth="100" text="Зарегистрироваться" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+      <GridPane.margin>
+         <Insets right="100.0" />
+      </GridPane.margin></Button>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane fx:id="backgroundPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.itmo.controllers.Worker_profile">
+    <tabs>
+        <Tab text="Список запланированных поездок">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Separator layoutX="20.0" layoutY="50.0" prefHeight="0.0" prefWidth="950.0" />
+                        <HBox layoutX="300.0" layoutY="10.0" prefHeight="30.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Тип аккаунта:" />
+                                <Label fx:id="accountType" text="AccountType">
+                                    <HBox.margin>
+                                        <Insets left="20.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children></HBox>
+                        <HBox layoutX="20.0" layoutY="10.0" prefHeight="30.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Имя пользователя:" />
+                                <Label fx:id="userName" text="Name">
+                                    <HBox.margin>
+                                        <Insets left="20.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                  <ScrollPane fx:id="scrollVoyages" layoutX="20.0" layoutY="86.0" prefHeight="530.0" prefWidth="729.0">
+                     <content>
+                        <FlowPane fx:id="listOfVoyages" prefHeight="0.0" prefWidth="0.0" />
+                     </content>
+                  </ScrollPane>
+                  <Label layoutX="20.0" layoutY="63.0" text="Список доступных поездок:" />
+                  <VBox alignment="TOP_CENTER" layoutX="762.0" layoutY="86.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="227.0" prefWidth="224.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="toTourButton" defaultButton="true" mnemonicParsing="false" onAction="#toVoyages" prefHeight="25.0" prefWidth="244.0" text="Туры" />
+                        <Button fx:id="toRoutesButton" defaultButton="true" mnemonicParsing="false" onAction="#toRoutes" prefHeight="25.0" prefWidth="238.0" text="Маршруты" />
+                        <Button fx:id="toBusesButton" defaultButton="true" mnemonicParsing="false" onAction="#toBuses" prefHeight="25.0" prefWidth="289.0" text="Автобусы" />
+                     </children>
+                  </VBox>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Заявки пользователей">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tablePassengers" layoutX="47.0" layoutY="92.0" prefHeight="452.0" prefWidth="890.0">
+                    <columns>
+                      <TableColumn fx:id="idPassenger" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="nickPassenger" prefWidth="113.0" text="Ник пассажира" />
+                        <TableColumn fx:id="idWay" prefWidth="121.0" text="ID пути" />
+                        <TableColumn fx:id="stuffTableNumber" prefWidth="194.0" text="Табличный номер сотрудника" />
+                        <TableColumn fx:id="namePassenger" minWidth="0.0" prefWidth="136.0" text="Имя пассажира" />
+                        <TableColumn fx:id="isPayed" prefWidth="98.0" text="Статус оплаты" />
+                        <TableColumn fx:id="passportColumn" prefWidth="152.0" text="Пасспорт" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="409.0" layoutY="561.0" mnemonicParsing="false" onAction="#refreshButton" text="Обновить таблицу">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font></Button>
+               </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Локальная регистрация">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="189.0" layoutY="116.0" text="Имя клиента:">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font></Label>
+                  <Label layoutX="189.0" layoutY="178.0" text="ID маршрута:">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font></Label>
+                  <ComboBox fx:id="routeId" layoutX="315.0" layoutY="176.0" prefWidth="150.0" />
+                  <TextField fx:id="clientName" layoutX="316.0" layoutY="114.0" />
+                  <Button layoutX="259.0" layoutY="314.0" mnemonicParsing="false" onAction="#addPassenger" text="Зарегестрировать">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font></Button>
+                  <Label layoutX="203.0" layoutY="232.0" text="Пасспорт:">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="passportId" layoutX="316.0" layoutY="230.0" />
+               </children></AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
